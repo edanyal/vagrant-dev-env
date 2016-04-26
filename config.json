@@ -1,0 +1,6 @@
+{
+    "box_name": "dev_environment_centos7_docker",
+    "ip_address": "10.141.141.10",
+    "vm_ram": "2048",
+    "vm_cpus": "2"
+}
