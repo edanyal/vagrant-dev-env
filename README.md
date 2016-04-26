@@ -1,8 +1,8 @@
-# Vagrant environment with centos/7 as the operating system with docker:latested installed.
+# Vagrant environment with centos/7 as the operating system with docker:latest installed.
 
 * CentOS 7
 * Docker:latest
-* jenkins:lastest
+* jenkins:latest
 * .data folder mapped to VM's /data folder
 * src folder mapped to VMs /src folder
 
@@ -10,7 +10,7 @@
 
 0. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 1. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
-2. Install virtualbox guest plugin for mouting files.
+2. Install vagrant virtualbox guest filesystem plugin for mouting files.
 	```
 		$> vagrant plugin install vagrant-vbguest
 	```
