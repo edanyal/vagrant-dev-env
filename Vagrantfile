@@ -16,7 +16,8 @@ Vagrant.configure(2) do |config|
   config.vm.network :private_network, ip: envconf.ip_address
 
   # Storage stuff
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder ".data", "/data"
+  config.vm.synced_folder "src", "/src"
   
   # Custom config for provider, only vb for now.
   config.vm.provider :virtualbox do |vb|
@@ -25,6 +26,7 @@ Vagrant.configure(2) do |config|
     vb.customize ['modifyvm', :id, '--cpus',   envconf.vm_cpus]
   end
 
-  # Bootstrap install
-  config.vm.provision :shell, path: "bootstrap.sh"
+  # Install Docker
+  config.vm.provision :shell, path: "install_docker.sh"
+  config.vm.provision :shell, path: "install_jenkins.sh"
 end
