@@ -1,0 +1,1 @@
+Vagrant environment with centos/7 as the operating system with docker:latested installed.
