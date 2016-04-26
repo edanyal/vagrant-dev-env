@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Download and install Vagrant [link]https://www.vagrantup.com/downloads.html[link]
+1. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
 2. Clone this repo
 3. Run "vagrant up" in main repo folder.
 
