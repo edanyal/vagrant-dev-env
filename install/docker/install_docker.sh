@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+echo "*********"
+echo "********* Installing Docker"
+echo "*********"
+
 # Add docker repo to yum
 sudo cp sync/install/docker/docker.repo /etc/yum.repos.d/
 

@@ -20,14 +20,15 @@
 		$> vagrant up
 	```
 
-## Jenkins Access
+## Rancher - Port 9000
+###Set-up:
 
-After install go to [http://10.141.141.10:8080/](http://10.141.141.10:8080/) for your jenkins instance.
+###Data:
+	.data/rancherdb - Storage location for rancher mysql database
 
-The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
+## Jenkins - Port 9001
+###Set-up:
+	*The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
 
-## SSH Access
-
-```
-host:repo-folder $ vagrant ssh
-```
+###Data:
+	.data/jenkins_home - Jenkins jobs and configuration files
