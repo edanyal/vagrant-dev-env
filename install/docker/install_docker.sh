@@ -8,7 +8,6 @@ echo "*********"
 sudo cp sync/install/docker/docker.repo /etc/yum.repos.d/
 
 # Update existing packages and install docker engine
-sudo yum update -y
 sudo yum install docker-engine -y
 
 # Add current user to docker group

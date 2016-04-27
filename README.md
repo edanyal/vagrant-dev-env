@@ -11,24 +11,22 @@
 0. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 1. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
 2. Install vagrant virtualbox guest filesystem plugin for mouting files.
-	```
-		$> vagrant plugin install vagrant-vbguest
-	```
+```
+	$> vagrant plugin install vagrant-vbguest
+```
 2. Clone this repo
 3. Run "vagrant up" in main repo folder.
-	``` 
-		$> vagrant up
-	```
+``` 
+	$> vagrant up
+```
 
 ## Rancher - Port 9000
-###Set-up:
-
-###Data:
-	.data/rancherdb - Storage location for rancher mysql database
+####Data:
+.data/rancherdb - Storage location for rancher mysql database
 
 ## Jenkins - Port 9001
-###Set-up:
-	*The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
+####Set-up:
+*The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
 
-###Data:
-	.data/jenkins_home - Jenkins jobs and configuration files
+####Data:
+.data/jenkins_home - Jenkins jobs and configuration files

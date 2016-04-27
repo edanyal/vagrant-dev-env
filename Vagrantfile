@@ -27,7 +27,9 @@ Vagrant.configure(2) do |config|
   end
 
   # Install and configure stuff we want
+  config.vm.provision :shell, path: "install/install_main.sh"
   config.vm.provision :shell, path: "install/docker/install_docker.sh"
   config.vm.provision :shell, path: "install/jenkins/install_jenkins.sh"
-  config.vm.provision :shell, path: "install/rancher/install_rancher.sh"
+  #config.vm.provision :shell, path: "install/rancher/install_rancher.sh"
+  config.vm.provision :shell, path: "install/kubernetes/install_kubernets.sh"
 end
