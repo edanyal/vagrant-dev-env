@@ -20,10 +20,6 @@
 	$> vagrant up
 ```
 
-## Rancher - Port 9000
-####Data:
-.data/rancherdb - Storage location for rancher mysql database
-
 ## Jenkins - Port 9001
 ####Set-up:
 *The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword

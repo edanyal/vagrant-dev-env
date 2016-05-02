@@ -1,10 +1,13 @@
-#!/bin/bash -e
+#!/bin/bash
 
 echo "*********"
 echo "********* Global provisioning tasks"
 echo "*********"
 
-#update existing libraries of base box
-sudo yum update -y
-sudo yum install -y epel-release python-pip
-sudo pip install requests
+# Update existing libraries of base box
+sudo yum -y update
+
+##
+# Install pip and python packages
+#sudo curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+#sudo pip install requests
