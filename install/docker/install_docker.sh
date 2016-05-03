@@ -1,19 +1,34 @@
-#!/bin/bash -e
+#!/bin/bash
 
 echo "*********"
 echo "********* Installing Docker"
 echo "*********"
 
 # Add docker repo to yum
-sudo cp sync/install/docker/docker.repo /etc/yum.repos.d/
+if ! [ -f /etc/yum.repos.d/docker.repo ]; then
+	sudo cp sync/install/docker/docker.repo /etc/yum.repos.d/
+fi
 
-# Update existing packages and install docker engine
-sudo yum install docker-engine -y
+# If docker isn't installed, then install it.
+if ! [ -x "$(command -v docker)" ]; then
+	echo "Installing docker."
+	# install docker engine
+	sudo yum install docker-engine -y
 
-# Add current user to docker group
-sudo usermod -aG docker vagrant
-sudo chkconfig docker on
+	# set up docker permissions
+	sudo usermod -aG docker vagrant
+	sudo chkconfig docker on
+else
+	echo "Docker already installed."
+fi
 
-# Start docker service
-sudo systemctl enable docker.service
-sudo systemctl start docker.service
+if [ $(systemctl status docker.service | grep -c "running" ) = 0 ]; then
+	echo "Starting docker service."
+	# Start docker service
+	sudo systemctl enable docker.service
+	sudo systemctl start docker.service
+else
+	echo "Docker service already started."
+fi
+
+exit 0;
