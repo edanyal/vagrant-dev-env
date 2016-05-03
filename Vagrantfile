@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
   config.vm.network :private_network, ip: envconf.ip_address
 
   # Storage stuff
-  config.vm.synced_folder ".data", "/data"
+  config.vm.synced_folder "data", "/data"
   config.vm.synced_folder "src", "/src"
   
   # Custom config for provider, only vb for now.

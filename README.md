@@ -3,8 +3,8 @@
 * CentOS 7
 * Docker:latest
 * jenkins:latest
-* .data folder mapped to VM's /data folder
-* src folder mapped to VMs /src folder
+* /data folder mapped to VM's /data folder
+* /src folder mapped to VMs /src folder
 
 ## Installation
 
@@ -25,4 +25,4 @@
 *The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
 
 ####Data:
-.data/jenkins_home - Jenkins jobs and configuration files
+data/jenkins_home - Jenkins jobs and configuration files
