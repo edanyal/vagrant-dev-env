@@ -1,7 +1,7 @@
-#!/bin/bash -e
+#!/bin/bash
 
 echo "*********"
-echo "********* Installing Rancher"
+echo "********* Provisioning Rancher"
 echo "*********"
 
 # Install rancher server

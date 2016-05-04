@@ -15,6 +15,7 @@ envconf = PlayaSettings.new(ENV_CONFIG)
 Vagrant.configure(2) do |config|
   # Base VM Box
   config.vm.box = "centos/7"
+  config.vm.hostname = envconf.hostname
   
   # Network configuration
   # config.vm.network :forwarded_port, guest: 8080, host: 8080
@@ -26,13 +27,13 @@ Vagrant.configure(2) do |config|
   
   # Custom config for provider, only vb for now.
   config.vm.provider :virtualbox do |vb|
-    vb.name = envconf.box_name
+    vb.name = envconf.hostname
     vb.customize ['modifyvm', :id, '--memory', envconf.vm_ram]
     vb.customize ['modifyvm', :id, '--cpus',   envconf.vm_cpus]
   end
 
   # Install and configure stuff we want
-  config.vm.provision :shell, path: "install/install_main.sh"
-  config.vm.provision :shell, path: "install/docker/install_docker.sh"
-  config.vm.provision :shell, path: "install/jenkins/install_jenkins.sh"
+  config.vm.provision :shell, path: "provision/main.sh"
+  config.vm.provision :shell, path: "provision/docker/provision_docker.sh"
+  config.vm.provision :shell, path: "provision/jenkins/provision_jenkins.sh"
 end
