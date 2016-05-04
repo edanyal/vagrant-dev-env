@@ -11,18 +11,22 @@
 0. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 1. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
 2. Install vagrant virtualbox guest filesystem plugin for mouting files.
-```
-	$> vagrant plugin install vagrant-vbguest
-```
-2. Clone this repo
-3. Run "vagrant up" in main repo folder.
-``` 
-	$> vagrant up
-```
+
+	```
+	> vagrant plugin install vagrant-vbguest
+	```
+3. Clone this repo
+4. Run "vagrant up" in repo root folder.
+
+	``` 
+	> vagrant up
+	```
 
 ## Jenkins - Port 9001
-####Set-up:
-*The default admin password will be on your host machine in .data/jenkins_home/secrets/initialAdminPassword
+###Set-up:
 
-####Data:
-data/jenkins_home - Jenkins jobs and configuration files
+* The default admin password will be on your host machine in <repo-root>/data/jenkins_home/secrets/initialAdminPassword
+
+###Data:
+
+* <repo-root>/data/jenkins_home - Jenkins jobs and configuration files
