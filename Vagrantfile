@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
     vb.customize ['modifyvm', :id, '--cpus',   envconf.vm_cpus]
   end
 
-  # Install and configure stuff we want
+  # Provisioning steps
   config.vm.provision :shell, path: "provision/main.sh"
   config.vm.provision :shell, path: "provision/docker/provision_docker.sh"
   config.vm.provision :shell, path: "provision/jenkins/provision_jenkins.sh"

@@ -8,25 +8,30 @@
 
 ## Installation
 
-0. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-1. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
-2. Install vagrant virtualbox guest filesystem plugin for mouting files.
+1. [Download and install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+2. [Download and install Vagrant](https://www.vagrantup.com/downloads.html)
+3. Install vagrant virtualbox guest filesystem plugin for mouting files.
 
-	```
-	> vagrant plugin install vagrant-vbguest
-	```
-3. Clone this repo
-4. Run "vagrant up" in repo root folder.
+	``` > vagrant plugin install vagrant-vbguest ```
 
-	``` 
-	> vagrant up
-	```
+4. Clone this repo
+5. Run "vagrant up" in repo root folder.
+
+	``` > vagrant up ```
+
+## VM Access
+
+* Default IP: **10.141.141.10** (can be changed in config.js)
+
+* SSH access to VM via 
+
+	``` > vagrant ssh ```
 
 ## Jenkins - Port 9001
-###Set-up:
+#### Set-up
 
 * The default admin password will be on your host machine in <repo-root>/data/jenkins_home/secrets/initialAdminPassword
 
-###Data:
+#### Data
 
 * <repo-root>/data/jenkins_home - Jenkins jobs and configuration files
