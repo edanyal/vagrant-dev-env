@@ -36,4 +36,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "provision/main.sh"
   config.vm.provision :shell, path: "provision/docker/provision_docker.sh"
   config.vm.provision :shell, path: "provision/jenkins/provision_jenkins.sh"
+  config.vm.provision :shell, path: "provision/artifactory/provision_artifactory.sh"
 end
